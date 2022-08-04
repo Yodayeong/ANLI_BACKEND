@@ -4,7 +4,7 @@
 
 ## 전제적인 흐름
 
-![KakaoTalk_20220802_234045988](Django (20220802).assets/KakaoTalk_20220802_234045988.jpg)
+![KakaoTalk_20220802_234045988](README.assets/KakaoTalk_20220802_234045988.jpg)
 
 
 
@@ -25,15 +25,15 @@ django-admin startapp myapp
 
 [myproject - urls.py]
 
-![1](Django (20220802).assets/1.PNG)
+![1](README.assets/1.PNG)
 
 [myapp - urls.py]
 
-![2](Django (20220802).assets/2.PNG)
+![2](README.assets/2.PNG)
 
 [myapp - views.py]
 
-![3](Django (20220802).assets/3.PNG)
+![3](README.assets/3.PNG)
 
 
 

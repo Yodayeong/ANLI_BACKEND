@@ -46,8 +46,8 @@ ex) view.py
 
 ​	**[myapp -> views.py]**
 
-- ![1](Django (20220804-20220805).assets/1-16596237929382.PNG)
-- ![2](Django (20220804-20220805).assets/2.PNG)
+- ![1](README.assets/1.PNG)
+- ![2](README.assets/2.PNG)
 
 
 
