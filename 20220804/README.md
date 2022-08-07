@@ -48,11 +48,3 @@ ex) view.py
 
 - ![1](README.assets/1.PNG)
 - ![2](README.assets/2.PNG)
-
-
-
-2. **<u>상세보기</u>**
-
-​	**article**
-
-​	/read/<id>/
