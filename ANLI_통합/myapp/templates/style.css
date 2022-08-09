@@ -1,0 +1,38 @@
+.logo-wrapper{float:left;
+    padding: 15px 0;
+    overflow: hidden;
+}
+.logo {
+    padding: 0;
+    text-align: center;
+}
+.logo-img{
+    width: 100px;
+    margin-bottom: 0px;
+}
+.gnb{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gnb li{float: right;}
+
+.gnb li a{
+    display: block;
+    color: black;
+    background-color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px
+}
+
+.navbar-img{
+    width: 40px;
+    margin-bottom: 0px;
+}
+
+.gnb li a:hover {
+    color: #377D71;
+}

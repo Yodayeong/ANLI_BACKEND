@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting</title>
+    <link rel="stylesheet" href="css/hosting.css"/>
+</head>
+<body>
+    <div>
+        <!-- input image -->
+        <input type="file" name="file" id="imageFileOpenInput" accept="image/*" onchange="loadFile(event);">
+        <div id="image_container"></div>
+        <!-- other info -->
+        <div class="host-info-container">
+            <div>
+                <button class="host-info-btn" onclick="KindOfHome()"><h3>호스팅할 숙소 유형을 알려주세요. <span> ></span></h3></button>
+                <div style="display: none;" id="drop-content">
+                    <a hreaf='#'>원룸</a>
+                    <a hreaf='#'>Menu2</a>
+                    <a hreaf='#'>Menu3</a>
+                    <a hreaf='#'>Menu4</a>
+                    <a hreaf='#'>Menu5</a>
+                </div>
+            </div>
+            <button class="host-info-btn"><h3>숙소 위치는 어디인가요?</h3></button>
+            <button class="host-info-btn"><h3>가능한 기간을 설정해주세요</h3></button>
+            <button class="host-info-btn"><h3>가능한 최소/최대 기간을 설정해주세요.</h3></button>
+            <button class="host-info-btn"><h3>숙소의 공간 정보에 대해 알려주세요.</h3></button>
+            <button class="host-info-btn"><h3>숙소가 가지고 있는 옵션을 선택해주세요.</h3></button>
+            <div>
+                <h3>숙소에 대해 강조하고 싶은 점이나, 장점 등을 설명해주세요</h3>
+                <textarea cols="50" autofocus required wrap="hard" placeholder="숙소를 호스팅하게 된 이유에 대해 간략히 적어주는 것도 좋아요"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/hosting.js"></script>
+</html>
