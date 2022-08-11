@@ -11,6 +11,9 @@
 </head>
 <body>
     <h1>Blog PAGE</h1>
+    <div>
+        <a href="{% url 'new' %}">Write Blog</a>
+    </div>
     {% for blog in blogs %}
     <br>
     <br>
