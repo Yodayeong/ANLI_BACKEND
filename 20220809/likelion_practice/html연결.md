@@ -68,7 +68,7 @@ urlpatterns = [
     <title>BLOG</title>
     <style>
     #body 부분을 중앙정렬 해줌.
-    	<body>{text-align: center;}
+    	body{text-align: center;}
     </style>
 </head>
 <body>
@@ -138,7 +138,7 @@ class Blog(models.Model):
 
 ->blog에 detail.html 생성해주고
 
-->models.py에 detail.html 연결해주기
+->views.py에 detail.html 연결해주기
 
 ```bash
 from django.shortcuts import render, get_object_or_404

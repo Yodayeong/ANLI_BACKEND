@@ -104,9 +104,9 @@ class Blog(models.Model):
    : 모델로부터 생성한 마이그레이션 파일을 이용하여 데이터베이스의 테이블을 생성
 
    ```bash
-   #python manage.py migrate <앱이름>
+   #python manage.py migrate
    
-   python manage.py migrate blog
+   python manage.py migrate
    ```
 
    
