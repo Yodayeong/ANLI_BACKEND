@@ -16,13 +16,23 @@
         <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{% static 'img/루피.png' %}" alt="루피" width="30" class="d-inline-block align-text-top">
-            Blog Page
+            안리
         </a>
         </div>
     </nav>
 
-    <a href="{% url 'new' %}" class="btn btn-outline-success m-3">Write Blog</a>
+<div>
+    {% if user.is_authenticated %}
+        {{ user.username }}님 환영합니다.
+        <br>
+        <a href="{% url 'logout' %}" class="btn btn-outline-success m-3">logout</a>
+        <a href="{% url 'new' %}" class="btn btn-outline-success m-3">Write Blog</a>
+    {% else %}
+        <a href="{% url 'login' %}" class="btn btn-outline-success m-3">login</a>
+        <a href="{% url 'signup' %}" class="btn btn-outline-success m-3">signup</a>
+    {% endif %}
     <br>
+</div>
 
     <div class="d-inline-flex">
         {% for blog in blogs %}

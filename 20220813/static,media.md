@@ -454,12 +454,14 @@
      </html>
      ```
 
-   [button 부분]
+   
+
+   **[button 부분]**
 
    - Write Blog를 버튼으로
 
    - Componenets - Buttons
-
+   
      ```bash
      #blog/templates/home.html
      {% load static %}
