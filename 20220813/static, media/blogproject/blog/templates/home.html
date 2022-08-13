@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoda's Blog</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        body{text-align: center;}
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'img/루피.png' %}" alt="루피" width="30" class="d-inline-block align-text-top">
+            Blog Page
+        </a>
+        </div>
+    </nav>
+
+    <a href="{% url 'new' %}" class="btn btn-outline-success m-3">Write Blog</a>
+    <br>
+
+    <div class="d-inline-flex">
+        {% for blog in blogs %}
+        <div class="card m-3" style="width: 18rem;">
+            <img src="{{ blog.image.url }}" class="card-img-top" alt="사진"><br>
+            <div class="card-body">
+                <h5 class="card-title">{{ blog.title }}</h5>
+                <p class="card-text">
+                    {{ blog.writer }}
+                    {{ blog.pub_date }}<br>
+                    {{ blog.summary }}
+                </p>
+                <a href="{% url 'detail' blog.id %}" class="btn btn-primary">more</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
