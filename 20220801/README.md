@@ -14,6 +14,12 @@
 
 
 
+## MTV 패턴
+
+: Model + Template + View
+
+
+
 ## 장고 설치
 
 ```bash
