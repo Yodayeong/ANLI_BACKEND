@@ -29,5 +29,6 @@ urlpatterns = [
     path('edit/<str:id>', views.edit, name="edit"),
     path('update/<str:id>', views.update, name="update"),
     path('delete/<str:id>', views.delete, name="delete"),
-    path('accounts/', include('accounts.urls'))
+    path('accounts/', include('accounts.urls')),
+    path('search/', include('search.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

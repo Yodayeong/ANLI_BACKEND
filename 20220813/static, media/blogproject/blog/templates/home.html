@@ -18,6 +18,10 @@
             <img src="{% static 'img/루피.png' %}" alt="루피" width="30" class="d-inline-block align-text-top">
             안리
         </a>
+        <form class="d-flex" action="{% url 'searchResult' %}" method="get">
+            <input class="form-control me-2" type="search" placeholder="Search" name="kw">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
         </div>
     </nav>
 
