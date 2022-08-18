@@ -1,24 +1,92 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
+    <title>Hosting</title>
+    <link rel="stylesheet" href="/static/css/hosting.css"/>
+    <link rel="stylesheet" href="/static/css/default-style.css"/>
 </head>
 <body>
-    <h1>Write Your Blog</h1>
-    <form action="{% url 'create' %}" method="post" enctype="multipart/form-data">
+    <form id="body-padding" action="{% url 'create' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        위치:<input type="text" name="location"><br>
-        작성자:<input type="text" name="writer"><br>
-        사진:<input type="file" name="image"><br>
-        숙소 유형:<input type="text" name="room_type"><br>
-        기간:<input type="text" placeholder="20XX-XX-XX ~ 20XX-XX-XX" name="duration"><br>
-        월세:<input type="text" placeholder="월 기준으로 적어주세요." name="price"><br>
-        본문<textarea name="body" id="" cols="30" rows="10"></textarea><br>
-        <button type="submit">submit</button>
+        <!-- input image -->
+        <div id="image_container">
+            <input type="file" name="image">
+            <div id="image"></div>
+        </div>
+        <!-- other info -->
+        <div class="host-info-container">
+            <div class="info-container">
+                <h4>호스팅 게시글의 제목을 알려주세요.</h4>
+                <textarea cols="50" name="title" autofocus required wrap="hard" placeholder="예시) 채광좋고 넓은 원룸, 지하철 역까지 5분 투룸"></textarea>
+            </div>
+            <div class="info-container">
+                <h4>호스팅할 집의 가격을 알려주세요.</h4>
+                <textarea cols="50" name="price" autofocus required wrap="hard" placeholder="*월세 기준으로 제시해주세요. 예시) 1달 당 48만원"></textarea>
+            </div>
+            <div class="info-container">
+                <h4>호스팅할 숙소 유형을 알려주세요.</h4>
+                <textarea cols="50" name="select_home" autofocus required wrap="hard" placeholder="원룸, 투룸, 오피스텔 등"></textarea>
+            </div>
+            <div class="info-container">
+                <h4>집의 상세 주소를 입력해주세요.</h4>
+                <textarea cols="50" name="location" autofocus required wrap="hard" placeholder="예시) 채광좋고 넓은 원룸, 지하철 역까지 5분 투룸"></textarea>
+            </div>
+            <div class="info-container">
+                <h4>가능한 최소 기간을 설정해주세요.</h4>
+                <textarea cols="50" name="smaller_period" autofocus required wrap="hard" placeholder="*월 단위로 입력해 주세요. 예시) 2개월, 6개월"></textarea>
+            </div>
+            <div>
+                <button class="host-info-btn" onclick="InputDays()"><h3>시작일과 종료일을 설정해주세요.<span class="rightside">></span></h3></button>
+                <div style="display: none;" class="drop-content-date" id="inputdays">
+                    <p><input type='date' name='startDay'/>~
+                    <input type='date' name='lastDay'/></p>
+                </div>
+            </div>
+            <div>
+                <button class="host-info-btn" onclick="InputInfo()"><h3>숙소의 공간 정보에 대해 알려주세요.<span class="rightside">></span></h3></button>
+                <div style="display: none;" class="drop-content-info" id="inputinfo">
+                    <p>
+                        &nbsp; 실평수: <input type="text" name="floor_space" placeholder="예시) 7평">
+                        <br>&nbsp; 욕실 수: <input type="text" name="bathroom" placeholder="예시) 1개">
+                        <br>&nbsp; 방 수/타입: <input type="text" name="room" placeholder="예시) 1개, 단층">
+                        <br>&nbsp; 침대 수/타입: <input type="text" name="bed" placeholder="예시) 1개, 싱글">
+                        <br>&nbsp; 기본 구조 설명: <input type="text" name="basic_info" placeholder="예시) 부엌, 침실">
+                    </p>
+                </div>
+            </div>
+            <div class="info-container">
+                <h4>숙소가 가진 옵션을 입력해주세요.</h4>
+                <textarea cols="50" name="option" autofocus required wrap="hard" placeholder="예시) 냉장고, 가스레인지, 세탁기, 인터넷됨, 옷장, 주차장있음 등"></textarea>
+            </div>
+            <div class="info-container">
+                <h4>숙소에 대해 강조하고 싶은 점이나, 장점 등을 설명해주세요</h4>
+                <textarea cols="50" name="description" style="height: 170px;" autofocus required wrap="hard" placeholder="숙소를 호스팅하게 된 이유에 대해 간략히 적어주는 것도 좋아요."></textarea>
+            </div>
+            <div class="info-container">
+                <div id="marginleft">
+                    <div>첨부파일  :  <a href="../전대사용동의서.pdf">전대사용동의서</a></div>
+                    <div class="placeholder">첨부된 전대사용동의서 작성하여 스캔한 후 파일을 업로드 해주세요.</div>
+                    <input type="file" name="host-contract-file" required>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="default-btn">등록하기</button>
     </form>
-    <a href="{% url 'home' %}">Back</a>
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div>이용약관 | <span class="bolder">개인정보처리방침</span></div>
+            <p>
+                <div class="fontsize13"><span class="bolder">전화문의</span> : 053-950-5114  &ensp;<span class="bolder">이메일 문의</span> : anli@likelion.org</div>
+                <div class="fontsize13"><span class="bolder">소재지</span> : 우)41566 대구광역시 북구 대학로 80 (산격동,경북대학교)</div>
+            </p>
+            <div class="copyright">Copyright(c)2002 by 안리. All Page content is property of ANLI</div>
+        </div>
+    </footer>
 </body>
+<script src="/static/js/hosting.js" type="text/javascript"></script>
 </html>

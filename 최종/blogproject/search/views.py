@@ -10,7 +10,7 @@ def searchResult(request):
 
         results = Blog.objects.filter(
             Q(location__icontains=query_1) &
-            Q(room_type__icontains=query_2)
+            Q(select_home__icontains=query_2)
         )
     
     return render(request, 'search.html', {'query_1': query_1, 'query_2': query_2, 'results': results})

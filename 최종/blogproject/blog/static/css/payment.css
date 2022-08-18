@@ -1,0 +1,145 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* 결제 박스 */
+.pymbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    border: 2px solid rgb(212, 212, 212);
+    margin-top: 100px;
+}
+
+/* 왼쪽 방 사진, 설명 */
+.room-pm{
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid rgb(212, 212, 212);
+    padding-right: 40px;
+}
+
+.room-pm-img{
+    width: 700px;
+    height: 500px;
+}
+
+.room-pm-name{
+    color:black;
+    font-size: 35px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.room-pm-loc{
+    color:#616161;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* 오른쪽 계약 정보 */
+.reserv{
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+    width: 700px;
+}
+
+.reserv-conf{
+    color:black;
+    font-size: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.bottom-line{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border-bottom: 2px solid rgb(212, 212, 212);
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.reserv-ltr{
+    color:black;
+    font-size: 25px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.reserv-start-btn{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-align: center;
+    width: 150px;
+    border: 2px solid rgb(212, 212, 212);
+}
+
+.reserv-count{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    height: 35px;
+}
+
+.reserv-count-btn{
+    color: black;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin-right: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgb(212, 212, 212);
+}
+
+.reserv-count-result{
+    height: 35px;
+    color:black;
+    font-size: 22px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.reserv-price{
+    color: #ffa8a8;
+    font-size: 23px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-top: 0;
+}
+
+.reserv-price-month{
+    color: #252525;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-top: 0;
+}

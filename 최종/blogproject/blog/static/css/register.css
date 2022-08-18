@@ -1,0 +1,50 @@
+.table-left {
+    width: 25%;
+    background: rgba(217, 217, 217, 0.5);
+    text-align: center;
+    height: 40px;
+}
+
+table, h2 {
+    margin-left: 190px;
+    margin-right: 130px;
+    width: 70%;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+td {
+    border: 1px solid #8B8B8B;
+    border-spacing: 0px;
+    padding: 0px;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #377d71;  
+    border: 1px solid gray;
+    border-radius: 20px;
+
+    margin-top: 20px;
+    margin-right: 200px;
+    float: right;
+}
+
+input, span {
+    margin-left: 15px;
+    height: 18px;
+}
+
+.agree-check {
+    background: rgba(217, 217, 217, 0.5);
+}
