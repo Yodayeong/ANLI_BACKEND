@@ -9,13 +9,14 @@
     <div class="card m-3" style="width: 18rem;">
         <img src="{{ result.image.url }}" class="card-img-top" alt="사진"><br>
         <div class="card-body">
-            <h5 class="card-title">{{ result.title }}</h5>
+            <h5 class="card-title">{{ result.location }}</h5>
             <p class="card-text">
-                {{ result.writer }}
-                {{ result.pub_date }}<br>
-                {{ result.summary }}
+                {{ result.duration }}<br>
+                {{ result.price }} / 달
             </p>
             <a href="{% url 'detail' result.id %}" class="btn btn-primary">more</a>
+            <br>
+            <br>
         </div>
     </div>
     {% endfor %}

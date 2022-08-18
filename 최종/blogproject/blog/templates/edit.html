@@ -10,8 +10,11 @@
     <h1>Edit Your Blog</h1>
     <form action="{% url 'update' blog.id %}" method="post">
         {% csrf_token %}
-        제목:<input type="text" name="title" value="{{blog.title}}"><br>
+        위치:<input type="text" name="location" value="{{blog.location}}"><br>
         작성자:<input type="text" name="writer" value="{{blog.writer}}"><br>
+        숙소 유형:<input type="text" name="room_type" value="{{blog.room_type}}"><br>
+        기간:<input type="text" name="duration" value="{{blog.duration}}"><br>
+        월세:<input type="text" placeholder="월 기준으로 적어주세요." value="{{blog.price}}"><br>
         본문<textarea name="body" id="" cols="30" rows="10">{{blog.body}}</textarea><br>
         <button type="submit">submit</button>
     </form>

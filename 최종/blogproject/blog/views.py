@@ -15,10 +15,13 @@ def new(request):
 
 def create(request):
     new_blog = Blog()
-    new_blog.title=request.POST['title']
+    new_blog.location=request.POST['location']
     new_blog.writer=request.POST['writer']
     new_blog.pub_date=timezone.now()
     new_blog.image=request.FILES['image']
+    new_blog.room_type=request.POST['room_type']
+    new_blog.duration=request.POST['duration']
+    new_blog.price=request.POST['price']
     new_blog.body=request.POST['body']
     new_blog.save()
     return redirect('detail', new_blog.id)
@@ -29,9 +32,12 @@ def edit(request, id):
 
 def update(request, id):
     update_blog = Blog.objects.get(id=id)
-    update_blog.title=request.POST['title']
+    update_blog.location=request.POST['location']
     update_blog.writer=request.POST['writer']
     update_blog.pub_date=timezone.now()
+    update_blog.room_type=request.POST['room_type']
+    update_blog.duration=request.POST['duration']
+    update_blog.price=request.POST['price']
     update_blog.body=request.POST['body']
     update_blog.save()
     return redirect('detail', update_blog.id)

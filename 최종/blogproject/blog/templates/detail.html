@@ -10,13 +10,16 @@
     </style>
 </head>
 <body>
-    <h1>{{ blog.title }}</h1>
+    <h1>{{ blog.location }}</h1>
     <br>
-    작성자: {{ blog.writer }}
-    날짜: {{ blog.pub_date }}
+    작성자: {{ blog.writer }} /
+    작성날짜: {{ blog.pub_date }}
     <hr>
     <img src="{{ blog.image.url }}" alt="사진"><br>
-    {{ blog.body }}
+    <h3>숙소 유형: {{ blog.room_type }}</h3>
+    <h3>기간: {{ blog.duration }}</h3>
+    <h3>요금: {{blog.price}} / 월</h3>
+    <h3>방 설명: {{ blog.body }}</h3>
     <br>
     <br>
     <a href="{% url 'home' %}">Home</a>

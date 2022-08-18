@@ -15,7 +15,7 @@
     <nav class="navbar bg-light">
         <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="{% static 'img/루피.png' %}" alt="루피" width="30" class="d-inline-block align-text-top">
+            <img src="{% static 'img/logo.png' %}" alt="안리" width="30" class="d-inline-block align-text-top">
             안리
         </a>
         <form class="d-flex" action="{% url 'searchResult' %}" method="get">
@@ -44,11 +44,10 @@
         <div class="card m-3" style="width: 18rem;">
             <img src="{{ blog.image.url }}" class="card-img-top" alt="사진"><br>
             <div class="card-body">
-                <h5 class="card-title">{{ blog.title }}</h5>
+                <h5 class="card-title">{{ blog.location }}</h5>
                 <p class="card-text">
-                    {{ blog.writer }}
-                    {{ blog.pub_date }}<br>
-                    {{ blog.summary }}
+                    {{ blog.duration }}<br>
+                    {{ blog.price }} / 달
                 </p>
                 <a href="{% url 'detail' blog.id %}" class="btn btn-primary">more</a>
             </div>
