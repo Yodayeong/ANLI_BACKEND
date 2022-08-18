@@ -1,0 +1,22 @@
+{% load static %}
+<h3>검색결과 출력 - 검색어 : <b>"{{ query_1 }}", "{{ query_2 }}"</b></h3>
+
+<hr>
+<br>
+
+<div class="d-inline-flex">
+    {% for result in results %}
+    <div class="card m-3" style="width: 18rem;">
+        <img src="{{ result.image.url }}" class="card-img-top" alt="사진"><br>
+        <div class="card-body">
+            <h5 class="card-title">{{ result.title }}</h5>
+            <p class="card-text">
+                {{ result.writer }}
+                {{ result.pub_date }}<br>
+                {{ result.summary }}
+            </p>
+            <a href="{% url 'detail' result.id %}" class="btn btn-primary">more</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -15,10 +15,12 @@ def new(request):
 
 def create(request):
     new_blog = Blog()
-    new_blog.title=request.POST['title']
+    new_blog.location=request.POST['location']
     new_blog.writer=request.POST['writer']
     new_blog.pub_date=timezone.now()
     new_blog.image=request.FILES['image']
+    new_blog.duration=request.POST['duration']
+    new_blog.price=request.POST['price']
     new_blog.body=request.POST['body']
     new_blog.save()
     return redirect('detail', new_blog.id)
